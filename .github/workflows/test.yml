@@ -3,8 +3,6 @@ name: Test
 on:
   workflow_dispatch:
   push:
-    tags:
-      - "test" # only run when there is a "test" tag on push
   pull_request:
     branches: [ "main" ]
 
@@ -26,7 +24,9 @@ jobs:
     - name: Install Dependencies
       # MacOS env on GitHub has separate gfortran, need symlink.
       run: |
-        sudo ln -s /usr/local/bin/gfortran-10 /usr/local/bin/gfortran
+        if [ "$RUNNER_OS" == "macOS" ]; then
+          sudo ln -s /usr/local/bin/gfortran-9 /usr/local/bin/gfortran
+        fi
         python -m pip install --upgrade pip
         pip install .
     - name: Run Tests
