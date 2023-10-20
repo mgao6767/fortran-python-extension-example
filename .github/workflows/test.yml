@@ -24,7 +24,9 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install Dependencies
+      # MacOS env on GitHub has separate gfortran, need symlink.
       run: |
+        sudo ln -s /usr/local/bin/gfortran-10 /usr/local/bin/gfortran
         python -m pip install --upgrade pip
         pip install .
     - name: Run Tests
