@@ -20,6 +20,10 @@ print(math.factorial(5))
 
 ## Build Status
 
-[![Test](https://github.com/mgao6767/fortran-python-extension-example/actions/workflows/test.yml/badge.svg)](https://github.com/mgao6767/fortran-python-extension-example/actions/workflows/test.yml)
-
 This example is built and tested with Python 3.8 to 3.11, on Ubuntu, Windows and MacOS.
+
+| OS      | Status                                                                                                                                                                                                                     |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ubuntu  | [![Ubuntu](https://github.com/mgao6767/fortran-python-extension-example/actions/workflows/Build-Ubuntu.yml/badge.svg)](https://github.com/mgao6767/fortran-python-extension-example/actions/workflows/Build-Ubuntu.yml)    |
+| Windows | [![Windows](https://github.com/mgao6767/fortran-python-extension-example/actions/workflows/Build-Windows.yml/badge.svg)](https://github.com/mgao6767/fortran-python-extension-example/actions/workflows/Build-Windows.yml) |
+| MacOS   | [![MacOS](https://github.com/mgao6767/fortran-python-extension-example/actions/workflows/Build-MacOS.yml/badge.svg)](https://github.com/mgao6767/fortran-python-extension-example/actions/workflows/Build-MacOS.yml)       |
